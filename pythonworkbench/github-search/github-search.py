@@ -2,7 +2,7 @@
 
 from github import Github
 
-ACCESS_TOKEN = 'insert access token'
+ACCESS_TOKEN = 'token goes here'
 g = Github(ACCESS_TOKEN)
 print(g.get_user().get_repos())
 
@@ -13,7 +13,7 @@ def search_github(keywords):
     print(f'Found {result.totalCount} repos(s)')
 
     for repo in result:
-        print(repo.clone_url)
+        print((f'{repo.clone_url}, {repo.stargazers_count} stars'))
 
 if __name__ == '__main__':
     keywords = input('Enter keyword(s)[e.g python, flask, postgres]: ')
