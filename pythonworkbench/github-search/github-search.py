@@ -2,7 +2,7 @@
 
 from github import Github
 
-ACCESS_TOKEN = 'token goes here'
+ACCESS_TOKEN = 'insert access token'
 g = Github(ACCESS_TOKEN)
 print(g.get_user().get_repos())
 
