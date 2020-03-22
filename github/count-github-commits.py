@@ -2,7 +2,8 @@
 
 from github import Github
 
-g = Github("insert access token")
+ACCESS_TOKEN = 'access token'
+g = Github(ACCESS_TOKEN)
 
 def repo_commit_count():
     for repo in g.get_user().get_repos():
