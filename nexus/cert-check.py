@@ -17,6 +17,7 @@ log = logging.getLogger(__name__)
 
 def run():
     driver.get(r1)
+    time.sleep(1)
     username_box = driver.find_element_by_id("textfield-1173-inputEl")
     username_box.send_keys(username)
     password_box = driver.find_element_by_id("textfield-1174-inputEl")
@@ -36,12 +37,16 @@ def check_repo(repo):
     cert_status = driver.find_element_by_css_selector(
         '.x-btn-button.x-btn-button-nx-primary-small.x-btn-text.x-btn-icon.x-btn-icon-left.x-btn-button-center')
     log.info("cert status: " + cert_status.text)
+    repo = repo.replace("http://localhost:8081/#admin/repository/repositories:", "")
     if "Remove" in cert_status.text:
         print(repo + " : Certificate OK")
     elif "Add" in cert_status.text:
-        print(repo + " : Certificate needs added")
+        print(repo + " : Certificate MISSING")
+        driver.find_element_by_css_selector(
+            '.x-btn-button.x-btn-button-nx-primary-small.x-btn-text.x-btn-icon.x-btn-icon-left.x-btn-button-center').click()
+        print("** certificate for " + repo + " has now been added **")
     else:
-        print(repo + " : Manual check required")
+        print(repo + " : MANUAL CHECK REQUIRED (cannot determine cert status)")
     webdriver.ActionChains(driver).send_keys(Keys.ESCAPE).perform()
 
 
