@@ -4,7 +4,7 @@
 
 ### Description
 
-Various Python scripts and apps to assist with API tasks, data manipulation and automating manual toil.
+Various Python scripts to assist with API tasks, data manipulation and automating manual toil.
 
 
 
