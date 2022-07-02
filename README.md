@@ -6,7 +6,7 @@ Various Python scripts to assist with API tasks, data manipulation and automatin
 
 <br />
 
-|    🍂       |    🍁
+|     ✨  |    |
 | ----------- | ----------- |
 | Tech Stack  | ![Python](https://img.shields.io/badge/python-3776AB.svg?style=for-the-badge&logo=python&logoColor=yellow)
 | Repo Size   | ![Repo Size](https://img.shields.io/github/repo-size/lylio/python-library?style=for-the-badge) |
