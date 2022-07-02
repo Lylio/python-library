@@ -1,5 +1,5 @@
-![](https://github.com/Lylio/image-repo/blob/master/logos/python.png?raw=true)
-![](https://github.com/Lylio/image-repo/blob/master/logos/python-script.png?raw=true)
+<img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="Python" alt="Python" width="80" height="80"/>&nbsp;
+
 # Python Library
 
 ### Description
